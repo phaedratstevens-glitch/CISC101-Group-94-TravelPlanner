@@ -1,4 +1,6 @@
 ### **Module 3 — Feasibility & Guardrails**
+> Change Log (2025-11-16):
+> – Updated distance rule to support “short walks only” preference.
 
 Apply these **if/else** checks to make sure plans are realistic and adapt to edge cases:
 
@@ -9,10 +11,11 @@ Apply these **if/else** checks to make sure plans are realistic and adapt to edg
 2. **Over-Budget Meal**
    
    - If meal cost > user’s budget → switch to a cheaper restaurant of similar cuisine.
-
 3. **Too Far or Long Travel**
    
-   - If transfer between activities > 25 min or > 5 km → pick a closer alternative or add a short transit hop.
+   - Default: if transfer between activities > 25 min or > 5 km → pick a closer alternative or add a short transit hop.  
+   - If the user says they want “short walks only”, aim for transfers under 15 minutes and prefer short transit (subway, bus, taxi) instead of long walks.
+
 
 4. **Weather Swap**
    
